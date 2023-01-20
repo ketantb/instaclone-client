@@ -1,0 +1,72 @@
+.post-form{
+    width: 60rem;
+    height: 25rem;
+    border: 0.1rem solid #707070;
+    position: relative;
+    top: 10rem;
+    margin:auto;
+}
+
+#myFile{
+    cursor: pointer;
+    margin-top: 3.1rem;
+    margin-left: 5rem;
+    width: 50rem;
+    height: 3.2rem;
+}
+
+/* .post-form:first-child{
+   
+    
+} */
+
+.A-L{
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+#author{
+    top: 3rem;
+    width: 20rem;
+    height: 3.2rem;
+    margin-left: 5rem;
+    padding-left: 1rem;
+    border: 0.1rem solid #707070;
+    border-radius: 0.5rem;
+}
+
+#location{
+    top: 3rem;
+    width: 20rem;
+    height: 3.2rem;
+    margin-left: 10rem;
+    padding-left: 1rem;
+    border: 0.1rem solid #707070;
+    border-radius: 0.5rem;
+}
+
+#description{
+    width: 50rem;
+    height: 3.2rem;
+    margin-top: 2.5rem;
+    margin-left: 5rem;
+    padding-left: 1rem;
+    border: 0.1rem solid #707070;
+    border-radius: 0.5rem;
+}
+
+#post-btn{
+    width: 10rem;
+    height: 3.2rem;
+    margin-top: 2.6rem; 
+    margin-left: 25rem;
+    border: 0.1rem solid #707070;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@media(max-width: 750px){
+    .post-form{
+         border: none; 
+    }
+}

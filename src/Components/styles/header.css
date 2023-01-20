@@ -1,0 +1,55 @@
+.header{
+    height: 8.4rem;
+    width: 100%;
+    border-bottom: 0.2rem solid hsl(154, 100%, 19%);
+    padding-bottom: 2rem;
+    margin: auto;  
+}
+
+.header-body{
+    margin-right: 12rem;
+    margin-left: 12rem;
+    margin-top: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-icon-block{
+   display: flex;
+   align-items: center;
+}
+
+.instaclone-client-icon{
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+.instaclone-client-heading{
+    font-size: 4.8rem;
+    color: #006238;
+}
+
+.header-camera-icon-block{
+     
+}
+
+.header-camera-icon{
+    margin-top: 1rem;
+    height: 4rem;
+    width: 4.4rem;
+}
+
+@media(max-width: 480px){
+    .header-body{
+    margin-right: 7rem;
+    margin-left: 7rem;
+    }
+}
+
+@media(max-width: 360px){
+    .header-body{
+    margin-right: 3rem;
+    margin-left: 3rem;
+    }
+}
