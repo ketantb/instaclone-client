@@ -1,7 +1,11 @@
 import { data } from "./data";
+// import { userCount } from "./data"
 import "../styles/card.css"
+import { useState } from "react";
 
 const Cards = () => {
+    
+    const [likecount, setLikecount] = useState(0)
     return (
         <>
             <section className="cards">
@@ -22,14 +26,15 @@ const Cards = () => {
                                 <div><img id="post-img" src={PostImage} alt="Avatar" /></div>
                                 <div className="likebtn-share-date-block">
                                     <div className="like-share-block">
-                                        <div><img className="heart-icon" src="Assets/heart.jpg" alt="heart-icon" /></div>
+                                        <div><img className="heart-icon" src="Assets/heart.jpg" alt="heart-icon" onClick={() => {setLikecount(likecount + 1)}}/></div>
                                         <div><img className="share-icon" src="Assets/share.jpg" alt="share-icon" /></div>
                                     </div>
                                     <div className="date">
                                         {date}
                                     </div>
                                 </div>
-                                <div className="like-count">{likes} likes</div>
+                                {/* <div className="like-count">{likes} likes</div> */}
+                                <div className="like-count">{likecount} likes</div>
                                 <div className="description">{description}</div>
                             </div>
                         )

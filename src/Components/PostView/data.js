@@ -24,3 +24,5 @@ export const data = [
         date: "21 April 2021",
     }
 ]
+
+export const userCount = data.length;

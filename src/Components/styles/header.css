@@ -6,6 +6,7 @@
     margin: auto;  
 }
 
+
 .header-body{
     margin-right: 12rem;
     margin-left: 12rem;
@@ -15,23 +16,28 @@
     justify-content: space-between;
 }
 
+a{
+    text-decoration: none;
+}
+
 .header-icon-block{
    display: flex;
    align-items: center;
 }
 
-.instaclone-client-icon{
+.instaclone-icon{
     width: 4.8rem;
     height: 4.8rem;
 }
 
-.instaclone-client-heading{
+.instaclone-heading{
     font-size: 4.8rem;
     color: #006238;
+    margin-left: 0.6rem;
 }
 
 .header-camera-icon-block{
-     
+     /* margin-bottom: 0.5rem; */
 }
 
 .header-camera-icon{
