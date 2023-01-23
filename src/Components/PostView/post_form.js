@@ -6,7 +6,7 @@ import { nanoid } from "nanoid";
 import moment from "moment/moment";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Slide, Zoom, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -18,10 +18,9 @@ const PostForm = () => {
 
 const yes = formData.author.length && formData.location.length && formData.description.length
 
-console.log(yes)
-
 const fieldsAreMandatory = () => toast.warn("Author, Location & Description are mandatory Fields",{
-position: toast.POSITION.TOP_CENTER
+position: toast.POSITION.BOTTOM_CENTER
+
 });
 
 const postData = async(e) => {
@@ -84,8 +83,13 @@ const postData = async(e) => {
           </form>
         </div>
       </section>
-      <ToastContainer />
-
+      <ToastContainer 
+      autoClose= {1500}
+      transition= {Slide}
+      limit= {5}
+      theme= {"light"}
+      pauseOnFocusLoss= {false}
+      />
     </>
   )
 }

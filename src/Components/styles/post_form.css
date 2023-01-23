@@ -83,6 +83,7 @@
     height: 3rem; */
 }
 
+
 @media(max-width: 750px){
     .post-form{
         margin-top: 20%;
