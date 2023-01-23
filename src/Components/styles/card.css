@@ -7,6 +7,7 @@
 .card{
     width: 54rem;
     /* height: 52rem; */
+    box-sizing: content-box;
     padding-bottom: 3rem;
     margin: auto;
     margin-top: 5rem;
@@ -16,7 +17,7 @@
 
 #post-img{
     width: 54rem;
-    height: 28rem;
+    height: 36rem;
     margin-top: 1.5rem;
 }
 
@@ -34,12 +35,11 @@
 }
 
 .more-icon-block{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .more-icon{
-    width: 2rem;
-    height: 0.5rem;
+    font-size: 2.2rem;
 }
 
 .user-name{

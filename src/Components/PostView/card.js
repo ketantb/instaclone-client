@@ -2,39 +2,50 @@ import { data } from "./data";
 // import { userCount } from "./data"
 import "../styles/card.css"
 import { useState } from "react";
+import { BsThreeDots, BsHeart } from 'react-icons/bs';
+import { SlPaperPlane } from 'react-icons/sl';
 
-const Cards = () => {
-    
-    const [likecount, setLikecount] = useState(0)
+const Cards = ({data}) => {
+    console.log(data)
+    if(!data){
+        return(
+            <>
+            <h1>Loading...</h1>
+            </>
+        )
+    }
     return (
         <>
-            <section className="cards">
+             <section className="cards">
                 <div>
-                    {data.map((items, index) => {
-                        const { name, location, likes, description, PostImage, date } = items;
+                    {data.map((items) => {
+                        const { date, description, id, likes, location, name } = items;
                         return (
-                            <div className="card" key={index}>
+                            <div className="card" key={id}>
                                 <div className="card-header">
                                     <div>
                                         <div className="user-name">{name}</div>
                                         <div className="user-location">{location}</div>
                                     </div>
                                     <div className="more-icon-block">
-                                        <img className="more-icon" src="Assets/more_icon.jpg" alt="more-icon" />
+                                        <BsThreeDots className="more-icon"/>
                                     </div>
                                 </div>
-                                <div><img id="post-img" src={PostImage} alt="Avatar" /></div>
+                                {/* <div><img id="post-img" src={PostImage} alt="Avatar" /></div> */}
                                 <div className="likebtn-share-date-block">
                                     <div className="like-share-block">
-                                        <div><img className="heart-icon" src="Assets/heart.jpg" alt="heart-icon" onClick={() => {setLikecount(likecount + 1)}}/></div>
-                                        <div><img className="share-icon" src="Assets/share.jpg" alt="share-icon" /></div>
+                                        <div>
+                                            <BsHeart className="heart-icon"/>
+                                        </div>
+                                        <div>
+                                            <SlPaperPlane className="share-icon"/>
+                                        </div>
                                     </div>
                                     <div className="date">
                                         {date}
                                     </div>
                                 </div>
-                                {/* <div className="like-count">{likes} likes</div> */}
-                                <div className="like-count">{likecount} likes</div>
+                                <div className="like-count">{likes} likes</div>
                                 <div className="description">{description}</div>
                             </div>
                         )

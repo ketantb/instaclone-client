@@ -12,8 +12,8 @@ export default function LandingPage() {
         </div>
         <div className='landing-page-right-col'>
           <div className='team-name'>10x Ketan</div>
-          <div className='enter-btn'>
-          <Link className='enter-btn-link' to="/post-view">Enter</Link>
+          <div className='enter-btn enter-hover'>
+          <Link className='enter-btn-link enter-hover' to="/post-view">Enter</Link>
           </div>
         </div>
       </section>

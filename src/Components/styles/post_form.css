@@ -20,7 +20,7 @@
     
 } */
 
-.A-L{
+.Author-Location{
     margin-top: 2rem;
     display: inline-block;
 }
@@ -33,6 +33,7 @@
     padding-left: 1rem;
     border: 0.1rem solid #707070;
     border-radius: 0.5rem;
+    outline: none;
 }
 
 #location{
@@ -43,6 +44,7 @@
     padding-left: 1rem;
     border: 0.1rem solid #707070;
     border-radius: 0.5rem;
+    outline: none;
 }
 
 #description{
@@ -53,20 +55,44 @@
     padding-left: 1rem;
     border: 0.1rem solid #707070;
     border-radius: 0.5rem;
+    outline: none;
 }
 
 #post-btn{
     width: 10rem;
     height: 3.2rem;
-    margin-top: 2.6rem; 
-    margin-left: 25rem;
-    border: 0.1rem solid #707070;
-    border-radius: 0.5rem;
+    /* margin-top: 2.6rem;  */
+    /* margin-left: 25rem; */
+    /* border: 0.1rem solid #707070; */
+    /* border-radius: 0.5rem; */
     cursor: pointer;
+    /* box-sizing: content-box; */
+}
+
+#post-btn-parent{
+    width: 100px;
+    margin-left: 25rem;
+    margin-top: 2.6rem;
+    /* border: 0.1rem solid #707070; */
+    border-radius: 0.5rem;
+}
+
+#postbtn-link-to-post-view-page{
+    /* background-color: red; */
+    /* width: 100%;
+    height: 3rem; */
 }
 
 @media(max-width: 750px){
     .post-form{
-         border: none; 
+        margin-top: 20%;
+        /* border: none;  */
+    }
+}
+
+@media(max-width: 480px){
+    .post-form{
+        margin-top: 35%;
+        border: none; 
     }
 }

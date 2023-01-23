@@ -69,8 +69,11 @@ body{
     padding-bottom: 0px;
 }
 
-.enter-btn:hover{
-    background-color: #59f5e5;
+
+.enter-hover:hover{
+    /* background-color: #59f5e5; */
+    color: rgb(255, 37, 74);
+    border-color: rgb(255, 37, 74);
 }
 
 .enter-btn-link{
