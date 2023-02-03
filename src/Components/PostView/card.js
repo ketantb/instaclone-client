@@ -14,12 +14,12 @@ const Cards = ({data}) => {
             </>
         )
     }
-    return (
+    return ( 
         <>
              <section className="cards">
                 <div>
-                    {data.map((items) => {
-                        const { date, description, id, likes, location, name } = items;
+                    {data.reverse().map((items) => {
+                        const { date, description, id, likes, location,image, name } = items;
                         return (
                             <div className="card" key={id}>
                                 <div className="card-header">
@@ -31,7 +31,7 @@ const Cards = ({data}) => {
                                         <BsThreeDots className="more-icon"/>
                                     </div>
                                 </div>
-                                {/* <div><img id="post-img" src={PostImage} alt="Avatar" /></div> */}
+                                <div><img id="post-img" src={image} alt="Avatar" /></div>
                                 <div className="likebtn-share-date-block">
                                     <div className="like-share-block">
                                         <div>
