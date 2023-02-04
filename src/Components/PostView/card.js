@@ -1,5 +1,5 @@
-import { data } from "./data";
-// import { userCount } from "./data"
+import { DummyData } from "./data";
+// import { userCount } from "./cardData"
 import "../styles/card.css"
 import { useState } from "react";
 import { BsThreeDots, BsHeart } from 'react-icons/bs';
@@ -7,7 +7,9 @@ import { SlPaperPlane } from 'react-icons/sl';
 
 const Cards = ({data}) => {
     console.log(data)
-    if(!data){
+    const cardData = data || DummyData
+    console.log(cardData)
+    if(!cardData){
         return(
             <>
             <h1>Loading...</h1>
@@ -18,8 +20,8 @@ const Cards = ({data}) => {
         <>
              <section className="cards">
                 <div>
-                    {data.reverse().map((items) => {
-                        const { date, description, id, likes, location,image, name } = items;
+                    {cardData.reverse().map((items) => {
+                        const { date, description, id, likes, location, image, name } = items;
                         return (
                             <div className="card" key={id}>
                                 <div className="card-header">
