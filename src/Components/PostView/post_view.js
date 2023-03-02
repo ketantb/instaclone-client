@@ -3,15 +3,13 @@ import React from 'react';
 import Cards from './card';
 import Header from './header';
 import { useState, useEffect } from 'react';
-import PostForm from './post_form';
  
 export default function PostView({data}) {
 
   const [userData, setUserData] = useState()
   const fetchData = async () => {
    try{
-   //  await axios.get(`https://insta-server-yash.vercel.app`)
-   await axios.get('http://localhost:8081/all')
+   await axios.get("https://instaketan-server.onrender.com/all")
     .then((data) => 
     {
       setUserData(data.data)

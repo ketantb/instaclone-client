@@ -7,8 +7,8 @@ import { SlPaperPlane } from 'react-icons/sl';
 
 const Cards = ({data}) => {
     console.log(data)
-    const cardData = data || DummyData
-    console.log(cardData)
+    const cardData = data       // || DummyData
+    // console.log(cardData)
     if(!cardData){
         return(
             <>
@@ -21,7 +21,7 @@ const Cards = ({data}) => {
              <section className="cards">
                 <div>
                     {cardData.reverse().map((items) => {
-                        const { date, description, id, likes, location, image, name } = items;
+                        const { date, description, id, likes, location, imgUrl, name } = items;
                         return (
                             <div className="card" key={id}>
                                 <div className="card-header">
@@ -33,7 +33,7 @@ const Cards = ({data}) => {
                                         <BsThreeDots className="more-icon"/>
                                     </div>
                                 </div>
-                                <div><img id="post-img" src={image} alt="Avatar" /></div>
+                                <div><img id="post-img" src={imgUrl} alt="Avatar" /></div>
                                 <div className="likebtn-share-date-block">
                                     <div className="like-share-block">
                                         <div>
