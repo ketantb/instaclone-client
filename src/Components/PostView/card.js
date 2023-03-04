@@ -6,7 +6,7 @@ import { BsThreeDots, BsHeart } from 'react-icons/bs';
 import { SlPaperPlane } from 'react-icons/sl';
 
 const Cards = ({userData}) => {
-    console.log(userData)
+    // console.log(userData)
     const cardData = userData      // || DummyData
     // console.log(cardData)
     if(!cardData){
@@ -20,7 +20,7 @@ const Cards = ({userData}) => {
         <>
              <section className="cards">
                 <div>
-                    {cardData.reverse().map((items) => {
+                    {cardData.map((items) => {
                         const { date, description, id, likes, location, imgUrl, author } = items;
                         return (
                             <div className="card" key={id}>

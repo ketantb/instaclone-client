@@ -17,7 +17,7 @@ function App()  {
    await axios.get("https://instaketan-server.onrender.com/all")
     .then((data) => 
     {
-      setUserData(data.data)
+      setUserData(data.data.reverse())
     // console.log(data.data)
     })
    }
