@@ -5,9 +5,9 @@ import { useState } from "react";
 import { BsThreeDots, BsHeart } from 'react-icons/bs';
 import { SlPaperPlane } from 'react-icons/sl';
 
-const Cards = ({data}) => {
-    console.log(data)
-    const cardData = data       // || DummyData
+const Cards = ({userData}) => {
+    console.log(userData)
+    const cardData = userData      // || DummyData
     // console.log(cardData)
     if(!cardData){
         return(
@@ -21,12 +21,12 @@ const Cards = ({data}) => {
              <section className="cards">
                 <div>
                     {cardData.reverse().map((items) => {
-                        const { date, description, id, likes, location, imgUrl, name } = items;
+                        const { date, description, id, likes, location, imgUrl, author } = items;
                         return (
                             <div className="card" key={id}>
                                 <div className="card-header">
                                     <div>
-                                        <div className="user-name">{name}</div>
+                                        <div className="user-name">{author}</div>
                                         <div className="user-location">{location}</div>
                                     </div>
                                     <div className="more-icon-block">
