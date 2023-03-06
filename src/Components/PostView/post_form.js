@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const PostForm = () => {
 
-  const [form, setForm] = useState({ author: "", location: "", description: "", imgUrl: "", id: "", date: "", likes: 0 })
+  const [form, setForm] = useState({ author: "", location: "", description: "", imgUrl: "", likes: 0 })
   const [image, setImage] = useState(false)
 
   const handleChange = (params) => (e) => {
@@ -49,9 +49,8 @@ const PostForm = () => {
     else if(!image){
       return toast.error("No Image Chosen !")
     }
-    const uniqueId = nanoid()
-    const postingDate = moment().format('D MMM YYYY')
-    setForm({...form, id: uniqueId, date: postingDate})
+    form.id = nanoid()
+    form.date = moment().format("DD MMM YYYY")
     const imgData = new FormData()
     imgData.append("file", image)
     imgData.append("upload_preset", "ketanInstaClone")
