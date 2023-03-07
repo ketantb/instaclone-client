@@ -21,7 +21,7 @@ export default function PostView() {
      }
      useEffect(() => {
       fetchData();
-     }, [])
+     }, [userData])
      // console.log(userData)
   return(
      <>
