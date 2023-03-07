@@ -87,7 +87,7 @@ const PostForm = () => {
               </div>
             </div>
             <div>
-              <input type="text" id="description" maxLength={50} placeholder="Description" name="description" onChange={handleChange("description")} value={form.description}/>
+              <input type="text" id="description" maxLength={250} placeholder="Description" name="description" onChange={handleChange("description")} value={form.description}/>
             </div>
             <div id="post-btn-parent">
               <button id="post-btn" onClick={imgCloudUpload}>
