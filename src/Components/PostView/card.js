@@ -4,16 +4,15 @@ import "../styles/card.css"
 import { useState } from "react";
 import { BsThreeDots, BsHeart } from 'react-icons/bs';
 import { SlPaperPlane } from 'react-icons/sl';
+import Loader from "./loader";
 
 const Cards = ({userData}) => {
     // console.log(userData)
-    const cardData = userData      // || DummyData
+    const cardData = 0 //= userData      // || DummyData
     // console.log(cardData)
     if(!cardData){
         return(
-            <>
-            <h1>Loading...</h1>
-            </>
+            <Loader/>
         )
     }
     return ( 
