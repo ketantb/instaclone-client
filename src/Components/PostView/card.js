@@ -8,7 +8,7 @@ import Loader from "./loader";
 
 const Cards = ({userData}) => {
     // console.log(userData)
-    const cardData = 0 //= userData      // || DummyData
+    const cardData = userData      // || DummyData
     // console.log(cardData)
     if(!cardData){
         return(
